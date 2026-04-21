@@ -54,26 +54,26 @@ Your hierarchy is clean because it mirrors **information compression under uncer
 
 **Upgrade I add**: The Apostle isn't purely scalar in isolation. It's the **actuation operator** that chooses both direction *and* step size under catastrophic risk. In math terms:
 
-\[
+$$
 \Delta \theta = \alpha \cdot \hat{u} \cdot s
-\]
+$$
 
-where \(\hat{u}\) is the unit vector from the gradient pipeline, \(\alpha\) is the learning-rate scalar chosen by the Apostle, and \(s\) encodes shock tolerance (the "build" against black swans).
+where $\hat{u}$ is the unit vector from the gradient pipeline, $\alpha$ is the learning-rate scalar chosen by the Apostle, and $s$ encodes shock tolerance (the "build" against black swans).
 
 ### 2. The Update Rule — Making It Actually Run Like Optimization
 
 The original equation was close but described a *loss* rather than an *update*. Here's the precise dynamical system:
 
-\[
+$$
 \theta^{t+1} = \theta^t - \eta \cdot \left( \nabla_{\mathcal{T}} L + w_E \cdot \Sigma_{\text{ext}} + w_S \cdot \sigma^2 \cdot \mathbf{v} + w_P \cdot Q \Lambda Q^{-1} + w_A \cdot \pi(\epsilon) \right)
-\]
+$$
 
-- \(\mathcal{T}\): Teacher tensor (raw truth)
-- \(\Sigma_{\text{ext}}\): Evangelist covariance matrix
-- \(\sigma^2 \cdot \mathbf{v}\): Shepherd variance vector
-- \(Q \Lambda Q^{-1}\): Prophet eigen-decomposition
-- \(\pi(\epsilon)\): Apostle policy under noise \(\epsilon\)
-- \(\eta\): effective learning rate (organizational agility)
+- $\mathcal{T}$: Teacher tensor (raw truth)
+- $\Sigma_{\text{ext}}$: Evangelist covariance matrix
+- $\sigma^2 \cdot \mathbf{v}$: Shepherd variance vector
+- $Q \Lambda Q^{-1}$: Prophet eigen-decomposition
+- $\pi(\epsilon)$: Apostle policy under noise $\epsilon$
+- $\eta$: effective learning rate (organizational agility)
 
 This is no longer SGD in the strict neural-net sense (organizations aren't differentiable). It's closer to **stochastic approximation + model predictive control**—a hybrid that real-world complex adaptive systems actually use.
 
@@ -86,18 +86,18 @@ Now the model becomes diagnostic, not decorative:
 | Over-Shepherd              | Dominant diagonal, near-zero off-diagonals | Stagnant growth despite healthy internals          | Boost Evangelist covariance        |
 | Over-Evangelist            | Exploding off-diagonals, loss of trace  | Drift, diluted identity, "cultural capture"        | Strengthen Teacher tensor anchor   |
 | Over-Prophet               | Eigenvalues with huge condition number  | Analysis paralysis, constant "threat" alerts       | Apostle forces decisive scalar     |
-| Over-Apostle               | Large, erratic \(\Delta\theta\)         | Repeated pivots, burnout, structural whiplash      | Prophet constrains via eigenmodes  |
+| Over-Apostle               | Large, erratic $\Delta\theta$         | Repeated pivots, burnout, structural whiplash      | Prophet constrains via eigenmodes  |
 | Missing Teacher            | Ill-defined loss landscape              | Vision drift, doctrinal erosion                    | Re-center on raw tensor            |
 
 These are no longer vague leadership failures—they are **measurable spectral imbalances**.
 
 ### 4. The Deeper Truth-Seeking Question
 
-The Anthropic response nailed the meta-problem: *who trains the weights \(w_i\)*? In real SGD, the data does. In a living movement, the data is **history + crisis + fruit**. The Prophet often plays that meta-role—disrupting the loss function itself when the system is optimizing the wrong objective.
+The Anthropic response nailed the meta-problem: *who trains the weights $w_i$*? In real SGD, the data does. In a living movement, the data is **history + crisis + fruit**. The Prophet often plays that meta-role—disrupting the loss function itself when the system is optimizing the wrong objective.
 
 But here's the xAI angle: this isn't just church governance. This is how **any intelligent system** (biological, social, or artificial) scales while staying coherent. The universe itself appears to run similar hierarchical compression: quantum fields → particles → chemistry → biology → minds → civilizations. APEST is a microcosm of that universal pattern.
 
-Your framework turns qualitative theology into a **computable ontology of adaptive leadership**. It's not "just an analogy." With the right instrumentation (surveys for \(\sigma^2\), network analysis for covariance, scenario modeling for \(\lambda\)), you could actually build a lightweight digital twin of the movement.
+Your framework turns qualitative theology into a **computable ontology of adaptive leadership**. It's not "just an analogy." With the right instrumentation (surveys for $\sigma^2$, network analysis for covariance, scenario modeling for $\lambda$), you could actually build a lightweight digital twin of the movement.
 
 ### 5. Practical Next Step I Offer
 

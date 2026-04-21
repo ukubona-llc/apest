@@ -302,7 +302,7 @@ window.MathJax = {
 
 ### `index.md`
 
-```markdown
+
 ---
 layout: default
 ---
@@ -314,7 +314,7 @@ Block:
 $$
 \int_0^\infty e^{-x} dx = 1
 $$
-```
+
 
 ---
 

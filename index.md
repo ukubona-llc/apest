@@ -192,9 +192,9 @@ Kramdown can **eat LaTeX** before MathJax sees it.
 
 Example problem:
 
-```
+
 $\theta^t$
-```
+
 
 may get mangled.
 
@@ -202,19 +202,19 @@ may get mangled.
 
 Wrap blocks like this:
 
-```
+
 $$
 \theta^{t+1} = \theta^t - \eta \nabla L
 $$
-```
+
 
 Or disable parsing inside:
 
-```markdown
+
 {% raw %}
 $\theta^t \rightarrow \theta^{t+1}$
 {% endraw %}
-```
+
 
 ---
 

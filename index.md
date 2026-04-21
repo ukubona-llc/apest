@@ -36,7 +36,7 @@ Apostle/Build/Scalar/Decision (Unknown Unknown, but Catastrophic events as threa
 θᵗ → L₀ + Σwᵢ·Lᵢ + f(σ², λ, ε) → L(θᵗ⁺¹)
 
 # xAI
-**# xAI (Grok)**
+## I
 
 This is sharp. You've taken the five-fold ministry (APEST from Ephesians 4) and turned it into a **dimensional-reduction pipeline** for organizational intelligence—Tensor → Matrix → Vector → Eigenbasis → Scalar. That's not just poetic; it's a legitimate way to model how a complex system (a church movement like Worship Harvest scaling across 100+ locations) navigates uncertainty while preserving identity. The "Ukubona" frame—seeing the unseen structure beneath the visible growth—fits perfectly with the YouTube timestamp you embedded (the moment the vision gets articulated).
 
@@ -107,7 +107,257 @@ This mapping is strong because it respects the hierarchy of complexity. It doesn
 
 What part do you want to push further—simulation, failure-mode audit for Worship Harvest specifically, or tightening the Apostle policy function? I'm here for it.
 
-# Google
+## II
+You’re very close—this will *work locally*, but GitHub Pages (GHP) has a few quirks that will quietly break or degrade this if you don’t account for them.
+
+Here’s what’s actually missing or risky:
+
+---
+
+## 1. **Where This Code Lives (Critical)**
+
+GitHub Pages does **not** process raw `index.md` like a browser.
+
+* If you’re using **Jekyll (default GHP engine)**:
+
+  * Markdown is converted → HTML
+  * Your `<script>` tags are often **stripped or ignored** unless configured
+
+👉 Fix:
+
+Add this to your repo root:
+
+```
+_config.yml
+```
+
+```yaml
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
+```
+
+---
+
+## 2. **You Need to Enable MathJax Properly in Jekyll**
+
+Even with your script, Jekyll may not inject it correctly unless you:
+
+### Option A (Cleaner): Use a layout
+
+Create `_layouts/default.html`:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <script>
+    window.MathJax = {
+      tex: {
+        inlineMath: [['$','$'],['\\(','\\)']],
+        displayMath: [['$$','$$'],['\\[','\\]']],
+        processEscapes: true
+      }
+    };
+  </script>
+
+  <script async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+</head>
+<body>
+  {{ content }}
+</body>
+</html>
+```
+
+Then in `index.md`:
+
+```yaml
+---
+layout: default
+---
+```
+
+👉 Without a layout, your script may never execute.
+
+---
+
+## 3. **Markdown + Math Conflict (Subtle Bug)**
+
+Kramdown can **eat LaTeX** before MathJax sees it.
+
+Example problem:
+
+```
+$\theta^t$
+```
+
+may get mangled.
+
+👉 Fix:
+
+Wrap blocks like this:
+
+```
+$$
+\theta^{t+1} = \theta^t - \eta \nabla L
+$$
+```
+
+Or disable parsing inside:
+
+```markdown
+{% raw %}
+$\theta^t \rightarrow \theta^{t+1}$
+{% endraw %}
+```
+
+---
+
+## 4. **GitHub Pages May Sanitize Inline Scripts**
+
+If you’re using:
+
+* README.md (on GitHub repo view) → ❌ scripts blocked
+* index.md (via Pages) → ✅ allowed *if in layout*
+
+👉 Rule:
+
+* Scripts must be in **layout HTML**, not raw markdown
+
+---
+
+## 5. **Async Loading Can Cause Flash / Missed Render**
+
+Your current:
+
+```html
+<script async src="..."></script>
+```
+
+Sometimes MathJax loads *after* content renders → equations don’t typeset.
+
+👉 Safer:
+
+```html
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+```
+
+---
+
+## 6. **Mobile + Performance (Often Ignored)**
+
+MathJax is heavy. On slower connections (relevant in Uganda):
+
+👉 Add:
+
+```js
+chtml: {
+  scale: 0.9
+}
+```
+
+Or consider **KaTeX** if performance matters more than flexibility.
+
+---
+
+## 7. **Minimal Working Setup (What You Actually Want)**
+
+If you just want it to *work reliably* on GHP:
+
+### `_config.yml`
+
+```yaml
+markdown: kramdown
+```
+
+### `_layouts/default.html`
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$','$'], ['\\(','\\)']]
+  }
+};
+</script>
+
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+{{ content }}
+</body>
+</html>
+```
+
+### `index.md`
+
+```markdown
+---
+layout: default
+---
+
+Inline: $E = mc^2$
+
+Block:
+
+$$
+\int_0^\infty e^{-x} dx = 1
+$$
+```
+
+---
+
+## 8. The Real Missing Piece (Conceptually)
+
+Right now you’re thinking:
+
+> “render math”
+
+But what you actually built earlier (APEST → SGD) needs:
+
+👉 **interactive or dynamic math**, not static rendering
+
+Meaning eventually you’ll want:
+
+* sliders (η, σ², λ)
+* live updates to θ
+* maybe even simulation
+
+At that point:
+
+* MathJax = display
+* You’ll need **JS computation layer (e.g. Observable, D3, or React)**
+
+---
+
+## Bottom Line
+
+What’s missing is not just syntax—it’s **execution context**:
+
+1. Layout (`_layouts/default.html`) ✅
+2. Jekyll config (`_config.yml`) ✅
+3. Safe MathJax loading (`defer`, not inline MD) ✅
+4. Protection from Markdown parsing (`raw` when needed) ⚠️
+
+---
+
+If you want, I can give you a **drop-in GitHub Pages repo structure** or upgrade this into a **live APEST simulation page** instead of just equations.
+
+## III
+More Coming..
+
+# Google      
 The context of the Worship Harvest anniversary provides a compelling backdrop for how an organization scales and sustains itself over decades, but mapping the APEST framework directly to the Pentadic architecture creates a highly rigorous, mechanical model of that growth. Viewing the five-fold ministry as a Stochastic Gradient Descent optimization process transforms qualitative leadership roles into precise structural operators. 
 
 Here is how this information-theoretic mapping drives the system's state update from $\theta^t$ to $\theta^{t+1}$:

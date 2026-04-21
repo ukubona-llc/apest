@@ -17,7 +17,23 @@
 <!-- Usage block:  $$\int_0^\infty e^{-x} dx = 1$$ -->
 
 # Ukubona
-https://www.youtube.com/watch?v=OWaViLOJT5o&t=5926s  Teacher /Be/Tensor/Raw -> Evangelist /Become/Matrix/Off-Diagonal:Covariance-> Shepherd/Boost/Vector/Diagonal:Variance (Known Knowns) ->Prophet/Broaden/Eigenmode/Threats to Identity & Calling (Known Unknowns) -> Apostle/Build/Scalar/Decision (Unknown Unknown, but Catastrophic events as threats)... θᵗ → L₀ + Σwᵢ·Lᵢ + f(σ², λ, ε) → L(θᵗ⁺¹)
+<iframe 
+  width="560" 
+  height="315" 
+  src="https://www.youtube.com/embed/OWaViLOJT5o?start=229" 
+  frameborder="0" 
+  allowfullscreen>
+</iframe>
+
+```
+Teacher /Be/Tensor/Raw -> 
+Evangelist /Become/Matrix/Off-Diagonal:Covariance -> 
+Shepherd/Boost/Vector/Diagonal:Variance (Known Knowns) ->
+Prophet/Broaden/Eigenmode/Threats to Identity & Calling (Known Unknowns) -> 
+Apostle/Build/Scalar/Decision (Unknown Unknown, but Catastrophic events as threats)... 
+```
+
+θᵗ → L₀ + Σwᵢ·Lᵢ + f(σ², λ, ε) → L(θᵗ⁺¹)
 
 # xAI
 Not available

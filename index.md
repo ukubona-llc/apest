@@ -420,9 +420,9 @@ That’s a *loss construction*, not an update rule.
 
 For SGD, you need:
 
-[
+$$
 \theta^{t+1} = \theta^t - \eta \nabla_\theta L(\theta^t)
-]
+$$
 
 So the real question is:
 

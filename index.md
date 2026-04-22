@@ -969,7 +969,8 @@ Overall, the document is strongest as a generative framework and weakest where i
 > *This I say therefore, and testify in the Lord,*        
 > *That ye henceforth walk not as other Gentiles walk,*      
 > *In the vanity of their mind*         
-> --Ephesians 4:17
+> --Ephesians 4:17 
+
 ## xAI
 Not available
 ## Google

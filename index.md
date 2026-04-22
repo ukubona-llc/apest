@@ -16,6 +16,11 @@
 <!-- Usage inline: $E = mc^2$ -->
 <!-- Usage block:  $$\int_0^\infty e^{-x} dx = 1$$ -->
 
+> *This I say therefore, and testify in the Lord,*        
+> *That ye henceforth walk not as other Gentiles walk,*      
+> *In the vanity of their mind*         
+> --[Ephesians 4:11](https://www.biblegateway.com/passage/?search=Ephesians%204&version=KJV)
+
 # Ukubona
 <iframe 
   width="560" 

@@ -668,14 +668,14 @@ Translate to:
 
 So:
 
-[
+$$
 L(\theta) = L_{core} + \lambda \cdot L_{tail}
-]
+$$
 
 Where:
 
-* (L_{tail}) = cost concentrated in **lowest-percentile nodes**
-* (\lambda \to \infty) if unmet
+* $L_{tail}$ = cost concentrated in **lowest-percentile nodes**
+* $\lambda \to \infty$ if unmet
 
 That’s your “Matthew 25 gate.”
 
@@ -692,9 +692,9 @@ Most government / enterprise systems today optimize something like:
 
 Mathematically:
 
-[
+$$
 L_{standard} = \mathbb{E}[loss(x)]
-]
+$$
 
 Problem:
 
@@ -706,9 +706,9 @@ Problem:
 
 You shift from **mean optimization → worst-case / tail-constrained optimization**
 
-[
+$$
 L_{system} = \mathbb{E}[loss] + \lambda \cdot \max(loss_{vulnerable})
-]
+$$
 
 This is closer to:
 

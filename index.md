@@ -2392,3 +2392,222 @@ The deepest unresolved tension in the framework is between the *closed* loop and
 This distinction matters computationally. A closed optimization loop converges to a minimum it finds. An open geodesic aimed at an external attractor converges to something it didn't construct. The Christian claim is the stronger one: not just that the constraints produce stable equilibria, but that the attractor is real and external and draws the system toward it regardless of the system's own gradient estimates. That's not optimization — that's something closer to gradient descent on a landscape you didn't design and can only partially observe.
 
 If that's what Ukubona is actually modeling, then the framework needs not just a measurement operator M(θ) but an *exogenous attractor term* — something that pulls even when the local gradient points elsewhere. Theologically, that's grace. Computationally, it's closer to a momentum term with an external reference signal than to standard SGD. The algorithm of us, properly specified, may not be fully autonomous.
+
+# Catalog
+Here’s a **clean, non-hand-wavy mapping** of all **27 New Testament books** into your
+**tensor → matrix → vector → eigenmode → scalar** (phase-transition) framework.
+
+I’m not going to force every book into a single box; instead, each book is placed where its **primary function in the system** sits.
+
+---
+
+# 🧭 The Five Phases (recap, tightened)
+
+* **Tensor (UNIV)** → full reality, raw state, identity, narrative substrate
+* **Matrix (UB)** → relationships, comparisons, tensions, structure of loss
+* **Vector (UI)** → direction, instruction, actionable movement
+* **Eigenmode (UKB)** → invariant truth, identity under perturbation
+* **Scalar (UX)** → final decision, judgment, convergence, end-state
+
+---
+
+# ✝️ The 27 Books Mapped
+
+## I. TENSOR — Narrative Substrate (State Space)
+
+These define the **world, actors, and full dimensionality**.
+
+40. Matthew
+
+41. Mark
+
+42. Luke
+
+43. John
+
+44. Acts
+
+👉 Function:
+
+* establish **θₜ (state of reality)**
+* define the landscape: Christ, kingdom, early church
+
+---
+
+## II. MATRIX — Relational / Structural Tension (Loss Surface)
+
+These explore **relationships, conflicts, distortions**.
+
+45. Romans
+46. 1 Corinthians
+47. 2 Corinthians
+48. Galatians
+
+👉 Function:
+
+* define **L(θ)**
+* what’s wrong, misaligned, costly
+* law vs grace, division, disorder
+
+---
+
+## III. VECTOR — Directional Instruction (Descent Begins)
+
+These tell you **how to move**.
+
+49. Ephesians
+50. Philippians
+51. Colossians
+52. 1 Thessalonians
+53. 2 Thessalonians
+
+👉 Function:
+
+* define **−η∇L (movement)**
+* “walk this way”
+* unity, endurance, alignment
+
+👉 Note:
+
+* **Ephesians sits at the top of this layer** (system-level vector field)
+
+---
+
+## IV. EIGENMODE — Stability, Identity, Invariant Structure
+
+These preserve **what must not change under pressure**.
+
+54. 1 Timothy
+
+55. 2 Timothy
+
+56. Titus
+
+57. Philemon
+
+58. Hebrews
+
+59. James
+
+60. 1 Peter
+
+61. 2 Peter
+
+62. 1 John
+
+63. 2 John
+
+64. 3 John
+
+65. Jude
+
+👉 Function:
+
+* define **stable modes (λ, identity)**
+* guard against drift, corruption, false gradients
+
+👉 This is:
+
+> “what survives perturbation”
+
+---
+
+## V. SCALAR — Convergence / Final State
+
+66. Revelation
+
+👉 Function:
+
+* **θₜ₊₁ (final collapse)**
+* judgment, resolution, new basin
+* full system convergence
+
+---
+
+# 🔥 Phase Transition View (Even Cleaner)
+
+## Phase 1: Exploration (High Entropy)
+
+* Gospels + Acts (Tensor)
+* Early Romans/Corinthians (Matrix)
+
+→ system is learning the landscape
+
+---
+
+## Phase 2: Gradient Discovery
+
+* Romans → Galatians (Matrix)
+* Ephesians → Thessalonians (Vector)
+
+→ direction becomes clear
+
+---
+
+## Phase 3: Stabilization
+
+* Pastoral + General Epistles (Eigenmode)
+
+→ identity locks in
+
+---
+
+## Phase 4: Collapse
+
+* Revelation (Scalar)
+
+→ final state realized
+
+---
+
+# 🧠 Where Ephesians Sits
+
+Right at the **transition between Matrix → Vector**
+
+It does:
+
+* takes theology (Romans)
+* converts it into **walk (trajectory)**
+
+👉 That’s why it feels like:
+
+> a **phase transition document**
+
+---
+
+# ⚠️ Important Correction (So This Stays Honest)
+
+This mapping is:
+
+* **structural / functional**
+* not historical or canonical intent
+
+The New Testament wasn’t *written* as an SGD pipeline.
+
+But:
+
+> it can be **interpreted as one coherent dynamical system**
+
+---
+
+# 🧩 Final Compression
+
+If I compress all 27 books into one line:
+
+> **The New Testament moves from describing reality → diagnosing misalignment → prescribing direction → stabilizing identity → declaring final convergence.**
+
+Or in your notation:
+
+$$
+\theta \rightarrow L(\theta) \rightarrow \nabla L \rightarrow -\eta\nabla L \rightarrow \theta^*
+$$
+
+---
+
+If you want, the next step is even more interesting:
+
+👉 map **Old Testament → New Testament** as *pre-training → fine-tuning → deployment*
+
+That’s where this framework really starts to bite.
+
+--OpenAI
